@@ -1,8 +1,8 @@
- body{
+body{
 
 font-family:Arial;
 
-background:#f2f2f2;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
 
 display:flex;
 
@@ -14,21 +14,27 @@ height:100vh;
 
 margin:0;
 
+transition:0.5s;
+
 }
 
 .container{
 
-background:white;
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(10px);
 
 padding:30px;
 
-width:350px;
+width:370px;
 
-border-radius:15px;
+border-radius:20px;
 
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+box-shadow:0 0 15px rgba(0,0,0,0.3);
 
 text-align:center;
+
+color:white;
 
 }
 
@@ -42,19 +48,65 @@ margin:10px;
 
 font-size:18px;
 
-border-radius:8px;
+border:none;
 
-border:1px solid gray;
+border-radius:10px;
+
+outline:none;
 
 }
 
-#strength{
+.password-box{
 
-font-size:28px;
+position:relative;
 
-font-weight:bold;
+}
+
+.password-box i{
+
+position:absolute;
+
+right:25px;
+
+top:23px;
+
+cursor:pointer;
+
+color:black;
+
+}
+
+.strength-container{
+
+width:100%;
+
+height:15px;
+
+background:#ddd;
+
+border-radius:20px;
+
+overflow:hidden;
 
 margin-top:15px;
+
+}
+
+#strength-bar{
+
+height:100%;
+
+width:0%;
+
+background:red;
+
+transition:0.5s;
+
+}
+
+#strength-text{
+
+margin-top:10px;
 
 }
 
@@ -66,6 +118,14 @@ margin-top:20px;
 
 }
 
+.rules{
+
+text-align:left;
+
+margin-top:15px;
+
+}
+
 #suggestion{
 
 margin-top:20px;
@@ -74,6 +134,30 @@ font-size:18px;
 
 font-weight:bold;
 
-color:blue;
+color:yellow;
+
+}
+
+button{
+
+padding:10px 15px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+margin-bottom:10px;
+
+}
+
+.dark{
+
+background:#111;
+
+color:white;
 
 }
