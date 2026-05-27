@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
-<title>Password Strength Checker</title>
+<meta charset="UTF-8">
 
-<link
-rel="stylesheet"
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Advanced Password Strength Checker</title>
+
+<link rel="stylesheet"
 href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 
@@ -15,13 +22,24 @@ href="style.css">
 
 <div class="container">
 
-<h1>Password Strength Checker</h1>
+<button id="darkBtn"
+onclick="toggleDarkMode()">
+
+🌙 Dark Mode
+
+</button>
+
+<h1>
+AI Password Strength Checker
+</h1>
 
 <input
 type="text"
 id="name"
-placeholder="Enter Name"
+placeholder="Enter Your Name"
 oninput="suggestPassword()">
+
+<div class="password-box">
 
 <input
 type="password"
@@ -29,9 +47,23 @@ id="password"
 placeholder="Enter Password"
 oninput="checkPassword()">
 
-<div id="strength">
-Enter Password
+<i class="fa-solid fa-eye"
+onclick="togglePassword()"
+id="eye">
+</i>
+
 </div>
+
+<div class="strength-container">
+
+<div id="strength-bar">
+</div>
+
+</div>
+
+<h2 id="strength-text">
+Strength
+</h2>
 
 <div class="info">
 
@@ -62,16 +94,50 @@ Special Characters:
 
 </div>
 
+<div class="rules">
+
+<p id="rule1">
+❌ Minimum 8 Characters
+</p>
+
+<p id="rule2">
+❌ Uppercase Letter
+</p>
+
+<p id="rule3">
+❌ Lowercase Letter
+</p>
+
+<p id="rule4">
+❌ Number
+</p>
+
+<p id="rule5">
+❌ Special Character
+</p>
+
+</div>
+
+<h3 id="entropy">
+Security Score: 0/100
+</h3>
+
+<h3 id="crack">
+Crack Time:
+</h3>
+
+<h3 id="warning">
+</h3>
+
 <div id="suggestion">
 
-AI Suggestion:
+AI Password Suggestion:
 
 </div>
 
 </div>
 
-<script
-src="script.js">
+<script src="script.js">
 </script>
 
 </body>
